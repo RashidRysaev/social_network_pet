@@ -42,6 +42,6 @@
   </nav>
 
   <main class="px-8 py-6 bg-gray-100">
-      <RouterView></RouterView>
+      <RouterView />
   </main>
 </template>
