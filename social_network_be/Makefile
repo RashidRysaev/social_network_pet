@@ -3,3 +3,6 @@ run:
 
 ruff:
 	ruff check --fix && ruff format
+
+mm:
+	python manage.py makemigrations && python manage.py migrate
