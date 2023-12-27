@@ -1,4 +1,5 @@
 import uuid
+
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
 from django.utils import timezone
@@ -24,3 +25,6 @@ class User(PermissionsMixin, AbstractBaseUser):
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"
     REQUIRED_FIELDS = []
+
+    def __str__(self) -> str:
+        return f"{self.name} -- {self.email}" if self.name else self.email
