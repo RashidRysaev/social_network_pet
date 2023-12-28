@@ -10,7 +10,7 @@ from .managers import CustomUserManager
 class User(PermissionsMixin, AbstractBaseUser):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     email = models.EmailField(unique=True)
-    name = models.CharField(max_length=255, blank=True, default="")
+    name = models.CharField(max_length=255, blank=True, null=True)
     avatar = models.ImageField(upload_to="avatars", blank=True, null=True)
 
     is_active = models.BooleanField(default=True)
