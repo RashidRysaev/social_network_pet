@@ -9,3 +9,6 @@ mm:
 
 shell:
 	python manage.py shell_plus
+
+amend:
+	git add . && git commit --amend --no-edit

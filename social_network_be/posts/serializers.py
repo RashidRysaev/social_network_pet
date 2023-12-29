@@ -3,11 +3,13 @@ from datetime import datetime
 from django.utils.timesince import timesince
 from rest_framework import serializers
 
+from accounts.serializers import UserSerializer
+
 from .models import Post
 
 
 class PostSerializer(serializers.ModelSerializer):
-    created_by = serializers.ReadOnlyField(source="created_by.name")
+    created_by = UserSerializer(read_only=True)
     created_at = serializers.SerializerMethodField()
 
     class Meta:

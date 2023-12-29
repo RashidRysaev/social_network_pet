@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # apps
     'accounts',
     'posts',
+    'search',
 
     # others
     'django_extensions',
